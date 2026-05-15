@@ -14,8 +14,8 @@ describe('1st Deliverable', () => {
     const basePlantNames = global.basePlants.map((plant) => plant.name);
     expect(plantNames).toEqual(basePlantNames);
 
-    const plantImages = plantItems.map((item) => item.querySelector('img').src.split('/')[-1]);
-    const basePlantImages = global.basePlants.map((plant) => plant.image.split('/')[-1]);
+    const plantImages = plantItems.map((item) => item.querySelector('img').src.split('/').pop());
+    const basePlantImages = global.basePlants.map((plant) => plant.image.split('/').pop());
     expect(plantImages).toEqual(basePlantImages);
 
     const plantPrices = plantItems.map((item) => item.querySelector('p').textContent);
@@ -33,8 +33,8 @@ describe('1st Deliverable', () => {
     const basePlantNames = global.alternatePlants.map((plant) => plant.name);
     expect(plantNames).toEqual(basePlantNames);
 
-    const plantImages = plantItems.map((item) => item.querySelector('img').src.split('/')[-1]);
-    const basePlantImages = global.alternatePlants.map((plant) => plant.image.split('/')[-1]);
+    const plantImages = plantItems.map((item) => item.querySelector('img').src.split('/').pop());
+    const basePlantImages = global.alternatePlants.map((plant) => plant.image.split('/').pop());
     expect(plantImages).toEqual(basePlantImages);
 
     const plantPrices = plantItems.map((item) => item.querySelector('p').textContent);
